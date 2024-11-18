@@ -1,0 +1,36 @@
+/* HealthyTips.css */
+.healthy-tips {
+    padding: 20px;
+    background-color: #fafafa;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.healthy-tips h2 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.tips-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.tip {
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.tip h3 {
+    margin-top: 0;
+    color: #4CAF50;
+}
+
+.tip p {
+    color: #555;
+    font-size: 14px;
+}

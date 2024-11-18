@@ -1,0 +1,14 @@
+/* Home.css */
+.home-container {
+  display: flex;
+  height: 100vh; /* Full height of the screen */
+  width: 70%;
+}
+
+.main-content {
+  margin-left: 220px; /* Offset the sidebar width */
+  padding: 20px;
+  /*width: calc(100% - 220px); /* Make sure the content doesn't overflow */
+  width: 70%;
+  background-color: #f4f4f4;
+}

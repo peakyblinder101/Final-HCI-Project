@@ -1,0 +1,35 @@
+/* DietaryProfile.css */
+.dietary-profile {
+    background-color: #f4f4f4;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.dietary-profile h2 {
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.dietary-content p {
+    font-size: 16px;
+    margin: 10px 0;
+}
+
+.dietary-content strong {
+    color: #2d2d2d;
+}
+
+.edit-button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.edit-button:hover {
+    background-color: #45a049;
+}

@@ -1,0 +1,197 @@
+.container-sig {
+  padding-top: 30px;
+  padding-bottom: 30px;
+  padding-left: 100px;
+  padding-right: 100px;
+}
+
+.signup-container {
+  display: flex;
+  justify-content: space-between; /* Place the form and image on opposite sides */
+  align-items: center;
+  width: 100%;
+  padding-left: 10px;
+  box-sizing: border-box;
+  backdrop-filter: blur(20px);
+  background: radial-gradient(circle, rgba(238, 174, 202, 0.216) 19%, rgba(148, 187, 233, 0.194) 73%);
+}
+
+.form-container h2 {
+  margin-left: 45%;
+}
+
+.form-container {
+  flex: 1; /* Take up the remaining space */
+  width: auto;
+}
+
+.signup-image-container {
+  margin-left: 40px; /* Add space between form and image */
+}
+
+.signup-image-container img {
+  padding: 0%;
+  width: 100%;
+  height: 600px;
+  /*border-radius: 10px; /* Optional: round the image corners */
+}
+
+/* Responsiveness for smaller screens */
+@media (max-width: 768px) {
+  .signup-container {
+    flex-direction: column; /* Stack form and image vertically on small screens */
+    align-items: center;
+  }
+
+  .signup-image-container {
+    margin-left: 0;
+    margin-top: 20px; /* Add space between form and image when stacked */
+    width: 80%; /* Make the image take up 80% of the width */
+  }
+}
+
+
+.form-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start; /* Align items to the top */
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+.form-group {
+  flex: 1; /* Equal size for each group */
+  margin: 0 5px; /* Consistent horizontal margin */
+  position: relative;
+}
+
+.form-group:last-child {
+  margin-right: 0; /* No margin on the last child */
+}
+
+input, select{
+  width: 100%; /* Full width */
+  max-width: 400px; /* Limit the maximum width */
+  min-height: 50px; /* Set a minimum height */
+  padding: 16px; /* Increased padding for a more spacious feel */
+  border: 1px solid #ccc;
+  border-radius: 40px;
+  box-sizing: border-box;
+  margin-top: 10px; /* Space between label and input */
+}
+
+input:focus, select:focus {
+  border-color: #28a745; /* Change border color on focus */
+}
+
+label {
+  position: absolute;
+  left: 12px; /* Position label more to the left */
+  top: 25px; /* Adjust top to provide more space above input */
+  transition: 0.3s ease all; /* Smooth transition */
+  color: #999;
+  pointer-events: none; /* Prevent pointer events */
+  font-size: 14px; /* Base font size for labels */
+}
+
+input.filled + label, 
+select.filled + label {
+  top: -8px; /* Adjust this value to lift the label higher */
+  font-size: 12px; /* Smaller font size when floating */
+  color: #28a745; /* Color when the label is floating */
+}
+
+.password-container-signup {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.password-container-signup span {
+  position: absolute;
+  position: absolute; /* Position the icon absolutely */
+  right: 15px; /* Adjust the distance from the right edge */
+  top: 50%; /* Center vertically */
+  transform: translateY(-50%); /* Align icon vertically in the middle */
+  margin-top: 7px;
+  cursor: pointer;
+}
+
+.signup-form-button-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.signup-form-button {
+  border-radius: 40px;
+  color: white;
+  width: 200px;
+  justify-items: center;
+  cursor: pointer;
+  background-color: #218838;
+}
+
+.signup-form-button:hover {
+  background-color: #378446d0;
+}
+
+.social-signup-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.or {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-weight: bold;
+  color: #000000;
+}
+
+.social-icons {
+  margin-top: 0px;
+  margin-bottom: 0px;
+  display: flex;
+  /*gap: 10px; /* Space between icons */
+}
+
+.social-icon {
+  cursor: pointer;
+  padding: 10px;
+  border-radius: 50%;
+  background-color: #f5f5f5; /* Light background for icons */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.social-icon:hover {
+  background-color: #e0e0e0;
+}
+
+
+.switch {
+  text-align: center;
+  margin-top: 10px;
+  margin-bottom: 0;
+  cursor: pointer;
+  width: 100%;
+}
+
+.error-message {
+  color: red;
+  margin-top: 10px;
+  font-size: 14px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+  .form-row {
+    flex-direction: column; /* Stack fields on smaller screens */
+  }
+  .form-group {
+    margin-right: 0; /* Remove right margin when stacked */
+    width: 100%; /* Ensure full width on smaller screens */
+  }
+}

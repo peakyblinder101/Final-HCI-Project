@@ -1,0 +1,194 @@
+/* Healthy Tips container */
+.healthy-tips {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    background-color: #ffffff;
+}
+
+/* Inner container for the healthy tip */
+.healthy-tips-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    background-color: #fff;
+    padding: 70px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 80%;
+    height: 70%;
+    position: relative; /* Needed for absolute positioning of arrows */
+}
+
+/* Left Arrow (Previous) */
+.arrow-left {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    font-size: 30px;
+    cursor: pointer;
+    padding: 10px;
+    background-color: #95bee5;
+    border: none;
+    color: #1C3481;
+}
+
+/* Right Arrow (Next) */
+.arrow-right {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    font-size: 30px;
+    cursor: pointer;
+    padding: 10px;
+    background-color: #95bee5;
+    border: none;
+    color: #1C3481;
+}
+
+/* Hide arrows when at the first or last item */
+.hidden {
+    visibility: hidden;
+}
+
+/* Quote container */
+.quote-container {
+    flex: 1;
+    margin-right: 20px;
+}
+
+.quote {
+    font-size: 18px;
+    font-style: italic;
+    color: #1C3481;
+    margin-bottom: 10px;
+    text-align: right;
+}
+
+.author {
+    text-align: right;
+    font-size: 17px;
+    font-style: italic;
+    color: #1C3481;
+}
+
+/* Explanation container */
+.explanation-container {
+    height: 60%;
+    margin-top: 20px;
+    color: #1C3481;
+    line-height: 1.6;
+    background-color: #D1DBDC;
+    border-radius: 20px;
+    font-size: 22px;
+    font-style: italic;
+    padding: 20px;
+    position: relative; /* To position MyNetDiary content at the bottom */
+    padding-bottom: 70px; /* Ensure space at the bottom for MyNetDiary container */
+}
+
+/* MyNetDiary Container */
+.mynetdiary-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute; /* Position it at the bottom */
+    bottom: 20px; /* Distance from the bottom of the explanation container */
+    left: 0;
+    right: 0;
+}
+
+/* MyNetDiary Image */
+.mynetdiary-image {
+    width: 300px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+/* MyNetDiary Text */
+.mynetdiary-text {
+    display: flex;
+    flex-direction: column;
+    text-align: right; /* Align text to the right side */
+    padding-right: 20px; /* Optional padding for spacing */
+}
+
+.mynetdiary-title {
+    margin: 0;
+    font-size: 18px;
+    font-weight: bold;
+    color: #1C3481;
+}
+
+.mynetdiary-description {
+    margin: 0;
+    font-size: 16px;
+    color: #555;
+}
+
+/* Author Identity container */
+.author-identity-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    width: 400px;
+    background-color: #071952;
+    border-radius: 20px;
+    padding: 20px; /* Ensure consistent spacing inside */
+    box-sizing: border-box; /* Make sure padding doesn't affect width */
+}
+
+/* Author Image */
+.author-image {
+    margin-top: 20px;
+    width: 350px;
+    height: 320px;
+    object-fit: cover;
+    margin-bottom: 15px;
+    border-radius: 20px;
+    border: 2px solid white;
+}
+
+/* Author Bio Section */
+.author-bio {
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 100%; /* Ensure it takes up full width */
+}
+
+/* Name and Title Styling */
+.author-name {
+    font-weight: bold;
+    font-size: 20px;
+    margin: 0px;
+    color: #fff;
+}
+
+/* Author Title */
+.author-title {
+    margin: 0px;
+    padding: 0%;
+    font-size: 14px;
+    color: #fff;
+}
+
+/* Bio Description */
+.author-description {
+    font-size: 15px;
+    color: #fff;
+    margin-top: 10px;
+}
+
+/* Make sure description doesn't overflow */
+.author-bio p {
+    word-wrap: break-word; /* Handle long text to prevent overflow */
+    margin-bottom: 5px; /* Prevent excessive vertical spacing between text */
+}

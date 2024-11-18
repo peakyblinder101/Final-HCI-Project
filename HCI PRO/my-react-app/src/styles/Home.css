@@ -1,0 +1,136 @@
+/* Home.css */
+
+/* Center the entire home page content */
+.home-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent; /* Light background */
+ 
+  height: 100%; /* Full viewport height */
+  overflow: hidden; /* Prevents any unwanted scrollbars */
+}
+
+/* Scanner container styling */
+.scanner-container {
+  background-image: url("../assets/startscan.png");
+  background-size: cover; /* Make the background image cover the entire container */
+  background-position: center center; /* Center the background image */
+  background-repeat: no-repeat; /* Prevent the image from repeating */
+  margin-top: 80px;
+  position: relative; /* Make the container relative to position the button inside it */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 80%; /* Set width of the scanner container */
+  max-width: 900px; /* Limiting the maximum width */
+  min-height: 350px; /* Minimum height to maintain visibility */
+  height: auto; /* Let the height adjust automatically based on content */
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin-bottom: 10px; /* Spacing between the scanner and the content below */
+  display: flex;
+  flex-direction: column; /* Keep content stacked vertically */
+  justify-content: flex-end; /* Align the button to the bottom */
+}
+
+/* Scan button positioning at the bottom-right of the scanner container */
+/* Scan button positioning at the bottom center of the scanner container */
+.scan-button {
+  position: absolute; /* Absolute positioning to place it at the bottom of the container */
+  bottom: 20px; /* 20px from the bottom of the container */
+  left: 50%; /* Move it 50% from the left of the container */
+  transform: translateX(-50%); /* Offset by 50% of its own width to center it horizontally */
+  background-color: transparent;
+  border: 2px solid #ffffff; /* Blue border */
+  color: #ffffff; /* Blue text */
+  padding: 15px 30px;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.scan-button:hover {
+  background-color: #ffffff62;
+  color: white;
+}
+
+/* Recent Scans Container Styling */
+.recent-scans-container {
+  margin-bottom: 20px;
+  width: 75%;
+  height: 30vh;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(204, 115, 115, 0.1);
+  border: 2px solid black;
+  overflow-y: auto; /* Allows vertical scrolling when content exceeds container height */
+  padding-right: 10px; /* Ensures space for the scrollbar */
+}
+
+/* Align the headers "Recent Scans" and "Product Info" vertically */
+.recent-scans-h3,
+.product-info-h3 {
+  display: flex;
+  align-items: center; /* Align the icons and text vertically */
+  padding-left: 20px; /* Align to the left */
+  margin-bottom: 10px;
+}
+
+.product-info-h3 {
+  padding-left: 45px;
+}
+
+/* Recent Scans list styling */
+.recent-scans {
+  margin-top: 0px;
+  height: 100%; /* Ensures the list takes full height of the container */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+/* Remove default margin and padding for the list */
+.recent-scans ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  width: auto;
+}
+
+/* Styling each list item */
+.recent-scans li {
+  display: flex;
+  align-items: center; /* Vertically aligns the content */
+  margin-top: 0;
+  padding: 10px;
+  border-bottom: 1px solid #000000;
+  font-size: 16px;
+  width: auto;
+  word-wrap: break-word;
+  padding-left: 45px;
+}
+
+/* Remove bottom border for last item */
+.recent-scans li:last-child {
+  border-bottom: none;
+}
+
+/* Add scrollbar on the right when the content overflows */
+.recent-scans-container::-webkit-scrollbar {
+  width: 8px;
+}
+
+.recent-scans-container::-webkit-scrollbar-thumb {
+  background: #888; /* Color of the scroll thumb */
+  border-radius: 10px;
+}
+
+.recent-scans-container::-webkit-scrollbar-thumb:hover {
+  background: #555; /* Darker thumb on hover */
+}
