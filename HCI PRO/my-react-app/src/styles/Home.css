@@ -1,56 +1,103 @@
-/* Home.css */
-
-/* Center the entire home page content */
 .home-page {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-color: transparent; /* Light background */
- 
-  height: 100%; /* Full viewport height */
-  overflow: hidden; /* Prevents any unwanted scrollbars */
+  background-color: rgb(255, 255, 255);
+  height: 100%;
+  overflow: hidden;
 }
 
-/* Scanner container styling */
+.small-card-user-container {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  width: 250px;
+  height: 45px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  border: 2px solid black;
+  padding: 10px 15px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  z-index: 10;
+}
+
+.user-avatar-small-card {
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+  margin-right: 15px;
+  background-color: #555;
+}
+
+.user-info-small-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  overflow: hidden;
+  margin-left: 10px;
+}
+
+.welcome-text-small-card {
+  margin: 0px;
+  font-size: 12px;
+  color: #000000;
+  margin-bottom: 2px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.username-small-card {
+  margin: 0px;
+  padding: 0px;
+  font-size: 14px;
+  font-weight: bold;
+  color: #000000;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
 .scanner-container {
   background-image: url("../assets/startscan.png");
-  background-size: cover; /* Make the background image cover the entire container */
-  background-position: center center; /* Center the background image */
-  background-repeat: no-repeat; /* Prevent the image from repeating */
-  margin-top: 80px;
-  position: relative; /* Make the container relative to position the button inside it */
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  margin-top: 90px;
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 80%; /* Set width of the scanner container */
-  max-width: 900px; /* Limiting the maximum width */
-  min-height: 350px; /* Minimum height to maintain visibility */
-  height: auto; /* Let the height adjust automatically based on content */
+  width: 80%;
+  max-width: 900px;
+  min-height: 340px;
+  height: auto;
   background-color: #fff;
   border-radius: 10px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   padding: 20px;
-  margin-bottom: 10px; /* Spacing between the scanner and the content below */
+  margin-bottom: 10px;
   display: flex;
-  flex-direction: column; /* Keep content stacked vertically */
-  justify-content: flex-end; /* Align the button to the bottom */
+  flex-direction: column;
+  justify-content: flex-end;
 }
 
-/* Scan button positioning at the bottom-right of the scanner container */
-/* Scan button positioning at the bottom center of the scanner container */
 .scan-button {
-  position: absolute; /* Absolute positioning to place it at the bottom of the container */
-  bottom: 20px; /* 20px from the bottom of the container */
-  left: 50%; /* Move it 50% from the left of the container */
-  transform: translateX(-50%); /* Offset by 50% of its own width to center it horizontally */
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
   background-color: transparent;
-  border: 2px solid #ffffff; /* Blue border */
-  color: #ffffff; /* Blue text */
-  padding: 15px 30px;
+  border: 2px solid #ffffff;
+  color: #ffffff;
+  padding: 15px 50px;
   font-size: 16px;
   font-weight: bold;
-  border-radius: 10px;
+  border-radius: 20px;
   cursor: pointer;
   transition: all 0.3s ease;
 }
@@ -60,77 +107,64 @@
   color: white;
 }
 
-/* Recent Scans Container Styling */
 .recent-scans-container {
-  margin-bottom: 20px;
+  margin: 0;
+  /*margin-bottom: 20px;*/
   width: 75%;
   height: 30vh;
   background-color: #fff;
   border-radius: 10px;
   box-shadow: 0 4px 6px rgba(204, 115, 115, 0.1);
   border: 2px solid black;
-  overflow-y: auto; /* Allows vertical scrolling when content exceeds container height */
-  padding-right: 10px; /* Ensures space for the scrollbar */
+  overflow-y: auto;
+  /*padding-right: 10px;*/
 }
 
-/* Align the headers "Recent Scans" and "Product Info" vertically */
-.recent-scans-h3,
-.product-info-h3 {
+.recent-scans-h3 {
   display: flex;
-  align-items: center; /* Align the icons and text vertically */
-  padding-left: 20px; /* Align to the left */
+  align-items: center;
+  padding-left: 20px;
   margin-bottom: 10px;
 }
 
 .product-info-h3 {
-  padding-left: 45px;
+  padding: 0px 0px 0px 45px;
 }
 
-/* Recent Scans list styling */
+
 .recent-scans {
-  margin-top: 0px;
-  height: 100%; /* Ensures the list takes full height of the container */
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
+  display: table;
+  width: 100%; 
+  border-collapse: collapse;
 }
 
-/* Remove default margin and padding for the list */
-.recent-scans ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  width: auto;
+.scan-row {
+  border-bottom: 2px solid black;
+  display: table-row; 
 }
 
-/* Styling each list item */
-.recent-scans li {
-  display: flex;
-  align-items: center; /* Vertically aligns the content */
-  margin-top: 0;
-  padding: 10px;
-  border-bottom: 1px solid #000000;
-  font-size: 16px;
-  width: auto;
-  word-wrap: break-word;
-  padding-left: 45px;
+.scan-item {
+  display: table-cell; 
+  font-size: 14px;
+  color: #333;
+  padding: 5px 0px 10px 45px;
+  border-radius: 0;
 }
 
-/* Remove bottom border for last item */
-.recent-scans li:last-child {
-  border-bottom: none;
+
+.scan-row:last-child .scan-item {
+  border-bottom: 2px solid black;
 }
 
-/* Add scrollbar on the right when the content overflows */
 .recent-scans-container::-webkit-scrollbar {
   width: 8px;
 }
 
 .recent-scans-container::-webkit-scrollbar-thumb {
-  background: #888; /* Color of the scroll thumb */
+  background: #888;
   border-radius: 10px;
 }
 
 .recent-scans-container::-webkit-scrollbar-thumb:hover {
-  background: #555; /* Darker thumb on hover */
+  background: #555;
 }

@@ -1,7 +1,14 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import '../styles/ScanHistory.css';
+import dadi from '../assets/dadi.jpg';
 
 const ScanHistory = () => {
+    const navigate = useNavigate();
+    const handleCardClick = () => {
+        navigate('/dietaryprofile');  // Navigate to the DietaryProfile page when the user clicks on the card
+      };
+  
     // Example data for scan records
     const scanRecords = [
         {
@@ -121,22 +128,36 @@ const ScanHistory = () => {
             status: 'Allergy Detected', 
             isAllergy: true
         },
-        // Add more example records as needed
+        
     ];
 
     return (
         <div className="scan-history">
+            
+            
+            <div className="small-card-user-container" onClick={handleCardClick}>
+                <img
+                src={dadi} 
+                alt="User Avatar"
+                className="user-avatar-small-card"
+                />
+                <div className="user-info-small-card">
+                <p className="welcome-text-small-card">Welcome Back,</p>
+                <p className="username-small-card">John Doe</p>
+                </div>
+            </div>
+
             <div className="scan-history-container">
                 <h2>Scan History</h2>
                 
-                {/* Category buttons */}
+               
                 <div className="scan-history-categories">
-                    <button className="category-btn">All</button>
-                    <button className="category-btn">Safe</button>
-                    <button className="category-btn">Allergies Detect</button>
+                    <button className="all-category-btn">All</button>
+                    <button className="safe-category-btn">Safe</button>
+                    <button className="detect-category-btn">Allergies Detect</button>
                 </div>
 
-                {/* Scan Records Table */}
+               
                 <div className="all-history-scan-records-container">
                     <div className="table-header">
                         <div className="table-header-item">Barcode No.</div>
@@ -147,7 +168,7 @@ const ScanHistory = () => {
                         <div className="table-header-item">Status</div>
                     </div>
 
-                    {/* Table rows */}
+                   
                     {scanRecords.map((record, index) => (
                         <div
                             key={index}

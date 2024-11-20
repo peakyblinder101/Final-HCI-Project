@@ -1,58 +1,58 @@
-/* General container for the entire scan history section */
+
 .scan-history {
-    background-color: #e9f083;
-    height: 100%; /* Take the full height of the viewport */
+    background-color: #ffffff;
+    height: 100%;
         
-    /* Flexbox for centering */
+    
     display: flex;
-    justify-content: center;  /* Horizontally centers */
-    align-items: center;      /* Vertically centers */
+    justify-content: center;  
+    align-items: center;      
 }
 
-
-/* Container holding the inner elements such as buttons and table */
 .scan-history-container {
+    border: none;
     margin-top: 8.7%;
-    width: 100%;
+    width: 80%;
     height: 80%;
-    background-color: rgb(111, 111, 111);
+    background-color: #ffffff;
     padding: 20px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    /*box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);*/
 }
 
-/* Category buttons (All, Safe, Allergies Detect) */
 .scan-history-categories {
     display: flex;
-    justify-content: space-between;
     margin-bottom: 20px;
 }
 
-.category-btn {
-    padding: 10px 20px;
-    background-color: #1C3481;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
+.all-category-btn, .safe-category-btn, .detect-category-btn {
+    margin-right: 10px;
+    border-radius: 20px;
+    background-color: #ffffff;
+    color: #000000;
+    border: 1px solid rgb(94, 94, 94);
     cursor: pointer;
     transition: background-color 0.3s ease;
-    flex: 1;
-    margin: 0 5px;
 }
 
-.category-btn:hover {
-    background-color: #335995;
+.all-category-btn, .safe-category-btn {
+    width: 100px;
 }
 
-/* Assuming each row has a height of 40px */
+.all-category-btn:hover, 
+.safe-category-btn:hover, 
+.detect-category-btn:hover {
+    background-color: #dcdcdc;
+}
+
 .all-history-scan-records-container {
-    max-height: 280px; /* 7 rows * 40px per row = 280px */
+    max-height: 450px; 
     overflow-y: auto;
     border: 1px solid #ccc;
     margin-top: 10px;
+    background-color: #ffffff;
+    border: 2px solid black;
 }
 
-
-/* Header row styling */
 .table-header {
     display: flex;
     font-weight: bold;
@@ -67,7 +67,6 @@
     font-size: 14px;
 }
 
-/* Row styling */
 .table-row {
     display: flex;
     margin-bottom: 10px;
@@ -80,13 +79,12 @@
     font-size: 14px;
 }
 
-/* Highlight allergy detected rows */
 .allergy-detected {
     background-color: red;
     color: white;
+    cursor: pointer;
 }
 
-/* Add some spacing between records */
 .table-row:not(.allergy-detected):hover {
     background-color: #f1f1f1;
     cursor: pointer;

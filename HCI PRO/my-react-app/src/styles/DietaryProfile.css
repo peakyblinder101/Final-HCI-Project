@@ -1,122 +1,110 @@
-/* Center the entire profile on the screen */
+
 .dietary-profile-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100%; /* Full viewport height */
-    background-color: #ffffff; /* Background color */
-    margin: 0;
-  }
-  
-  /* Container for the entire dietary profile */
-  .dietary-profile {
-    margin-top: 100px;
-    height: 70%;
-    width: 80%;
-    background-color: #fff;
-    border-radius: 30px;
-    padding: 20px;
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    border: 2px solid #000000; /* Border added around the entire profile container */
-  }
-  
-  /* Circle for the profile image at the top */
-  /* Circle for the profile image at the top */
-.profile-circle {
-    position: absolute;
-    top: -75px; /* Adjusted for the new size of the circle */
-    left: 50%;
-    transform: translateX(-50%);
-    width: 150px; /* Set the width of the circle to 150px */
-    height: 150px; /* Set the height of the circle to 150px */
-    background-color: #fff;
-    border-radius: 50%; /* Ensures it remains circular */
-    border: 2px solid #000000; /* Border around the circle */
-    overflow: hidden;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  }
-  
-  .profile-avatar {
-    width: 120px; /* Adjust the width of the image inside the circle */
-    height: 120px; /* Adjust the height of the image inside the circle */
-    object-fit: cover; /* Ensures the image fills the circle without distortion */
-  }
-  
-  
-  /* Username and email below the profile circle */
-  /* Username and email below the profile circle */
-.user-info {
-    text-align: center;
-    margin-top: 60px; /* Adds some space between the circle and text */
-    padding: 10px 0; /* Optional: adds vertical padding for spacing */
-  }
-  
-  /* Add underline to the username and email (one per line) */
-  .user-info .username,
-  .user-info .email {
-    margin: 5px 0;
-    font-size: 18px;
-    display: block; /* Ensures each item is on a new line */
-  }
-  
-  .username {
-    font-weight: bold;
-    padding-bottom: 5px;
-  }
-  
-  .email {
-    font-size: 14px;
-    color: #666;
-    padding-bottom: 5px; /* Adds spacing between the text and underline */
-    border-bottom: 1px solid #ddd; /* Lighter underline for email */
-  }
-  
-  
-  /* Dietary Profile Allergies Container */
-.dietary-allergies {
-    margin-top: auto; /* Pushes it to the bottom */
-    margin-bottom: 20px;
-    padding: 10px;
-    max-height: 200px; /* Set a max height for the container */
-    overflow-y: auto; /* Enable vertical scrolling when content overflows */
-    border: 2px solid black;
-    border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%; 
+  background-color: #ffffff;
+  margin: 0;
 }
-  
-  /* Title for allergies */
-  .dietary-allergies h4 {
-    font-size: 16px;
-    font-weight: bold;
-    display: flex;
-    align-items: center; /* Centers the icon and text vertically */
-  }
-  
-  .dietary-allergies h4 svg {
-    font-size: 20px; /* Adjust the icon size */
-  }
-  
-  /* New container for allergies list, displayed horizontally */
-  .allergies-list {
-    display: flex;
-    flex-wrap: wrap; /* Allows items to wrap to the next line */
-    gap: 10px; /* Adds space between each allergy item */
-    margin-top: 10px;
-  }
-  
-  .allergies-list span {
-    background-color: #f0f0f0; /* Light background for each item */
-    padding: 8px 16px; /* Adds some padding to the span */
-    border-radius: 20px; /* Rounded corners */
-    border: 1px solid #ddd; /* Light border */
-    font-size: 14px;
-    color: #333; /* Text color */
-  }
-  
-  
+
+.dietary-profile {
+  margin-top: 100px;
+  height: 70%;
+  width: 80%;
+  background-color: #fff;
+  border-radius: 30px;
+  padding: 20px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border: 2px solid #000000; 
+}
+
+.profile-circle {
+  position: absolute;
+  top: -75px; 
+  left: 50%;
+  transform: translateX(-50%);
+  width: 150px; 
+  height: 150px;
+  background-color: #fff;
+  border-radius: 50%;
+  border: 2px solid #000000; 
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.profile-avatar {
+  width: 220px; 
+  height: 150px; 
+  object-fit: cover;
+}
+
+.user-info {
+  text-align: center;
+  margin-top: 60px; 
+  padding: 10px 0; 
+}
+
+.user-info .username,
+.user-info .email {
+  margin: 5px 0;
+  font-size: 18px;
+  display: block; 
+}
+
+.username {
+  font-weight: bold;
+  padding-bottom: 5px;
+}
+
+.email {
+  font-size: 14px;
+  color: #666;
+  padding-bottom: 5px;
+  border-bottom: 1px solid #ddd; 
+}
+
+.dietary-allergies {
+  margin-top: auto; 
+  margin-bottom: 20px;
+  padding: 10px;
+  max-height: 200px; 
+  overflow-y: auto;
+  border: 2px solid black;
+  border-radius: 5px;
+}
+
+.dietary-allergies h4 {
+  font-size: 16px;
+  font-weight: bold;
+  display: flex;
+  align-items: center; 
+}
+
+.dietary-allergies h4 svg {
+  font-size: 20px; 
+}
+
+.allergies-list {
+  display: flex;
+  flex-wrap: wrap; 
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.allergies-list span {
+  background-color: #f0f0f0; 
+  padding: 8px 16px; 
+  border-radius: 20px; 
+  border: 1px solid #ddd; 
+  font-size: 14px;
+  color: #333; 
+}
+

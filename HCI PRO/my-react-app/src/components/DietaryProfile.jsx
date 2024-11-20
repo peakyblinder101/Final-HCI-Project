@@ -1,6 +1,7 @@
 import React from 'react';
 import { FaExclamationTriangle } from 'react-icons/fa'; // Import the warning icon
 import '../styles/DietaryProfile.css';
+import dadi from '../assets/dadi.jpg';
 
 const DietaryProfile = () => {
     return (
@@ -9,7 +10,7 @@ const DietaryProfile = () => {
                 {/* Top Circle Container for Profile Avatar */}
                 <div className="profile-circle">
                     <img 
-                        src="https://via.placeholder.com/150" 
+                        src= {dadi}
                         alt="Profile Avatar" 
                         className="profile-avatar" 
                     />
