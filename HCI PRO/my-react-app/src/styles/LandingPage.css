@@ -27,35 +27,98 @@ body {
   align-items: center;
   padding: 10px 10px;
   background-color: transparent;
-  border-bottom: 2px solid white; 
+  border-bottom: 2px solid white;
   height: 86px;
-  width: auto;
-  position: sticky;
+  position: relative;
+  top: 0;
   z-index: 1;
 }
 
-.burger {
+/* Dropdown containers for Solutions, Who We Serve, Resources, About Us */
+.solutions-dropdown, 
+.who-we-serve-dropdown, 
+.resources-dropdown,
+.about-us-dropdown {
   display: none;
-  flex-direction: column;
+  position: absolute;
+  top: 86px; /* Position below the navbar */
+  left: 0;
+  background-color: #c2e1ff;
+  padding: 20px;
+  width: auto;
+  z-index: 2;
+  justify-content: space-between;
+  border-top: 2px solid white;
+}
+
+/* Column styling inside the dropdown */
+.column {
+  width: auto; /* Each column takes up 45% width */
+  margin-bottom: 20px;
+  padding: 10px;
+}
+
+.column h3 {
+  font-size: 1.5rem;
+  color: rgb(0, 0, 0);
+  margin-bottom: 10px;
+}
+
+.column p {
+  color: rgb(0, 0, 0);
+  font-size: 1rem;
+}
+
+.vision-text{
+  color: #BA5E25;
+  
+}
+
+.column ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.column li {
+  margin-bottom: 10px;
+}
+
+.column li strong {
+  font-weight: bold;
+}
+
+/* Social Media Icons container inside About Us */
+.social-icons {
+  display: flex;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.social-icon {
+  color: #000;
+  width: 30px;
+  height: 30px;
   cursor: pointer;
-  background-color: transparent;
+  transition: transform 0.3s ease;
 }
 
-.bar {
-  height: 3px;
-  width: 25px;
-  background-color: white;
-  margin: 3px 0;
+.social-icon:hover {
+  transform: scale(1.2);
 }
 
+/* Show dropdown when hovering over the respective menu item */
+.nav-links li:hover .solutions-dropdown,
+.nav-links li:hover .who-we-serve-dropdown,
+.nav-links li:hover .resources-dropdown,
+.nav-links li:hover .about-us-dropdown {
+  display: flex;
+}
+
+/* Navbar links */
 .nav-links {
   list-style: none;
   display: flex;
   gap: 45px;
-}
-
-.nav-links.active {
-  display: flex;
 }
 
 .nav-links li a {
@@ -65,15 +128,49 @@ body {
   font-weight: bold;
 }
 
-.nav-links li {
-  white-space: nowrap; 
-}
-
 .nav-links li a:hover {
   opacity: 0.8;
   border-bottom: 2px solid #ffeed8;
 }
 
+/* About Us section specific styles */
+.nav-links li:hover .about-us-dropdown {
+  display: flex;
+}
+
+.about-us-dropdown {
+  width: auto; /* Adjust width of the About Us dropdown */
+  flex-direction: row;
+}
+
+.column {
+  width: 45%; /* Each column will take up 45% width of the dropdown */
+  margin-bottom: 20px;
+}
+
+.column h3 {
+  font-size: 1.5rem;
+  color: rgb(0, 0, 0);
+  margin-bottom: 10px;
+}
+
+/* Responsive Design for About Us dropdown */
+@media (max-width: 768px) {
+  .about-us-dropdown {
+    width: 100%; /* Full width for mobile */
+    flex-direction: column;
+  }
+
+  .column {
+    width: 100%; /* Full width for columns on small screens */
+  }
+
+  .social-icons {
+    flex-direction: column; /* Stack social icons vertically on small screens */
+  }
+}
+
+/* Mobile Styles */
 @media (max-width: 768px) {
   .nav-links {
     display: none;
@@ -89,7 +186,12 @@ body {
   .burger {
     display: flex;
   }
+
+  .nav-links.active {
+    display: flex;
+  }
 }
+
 
 /* Button Styles */
 .nav-buttons {

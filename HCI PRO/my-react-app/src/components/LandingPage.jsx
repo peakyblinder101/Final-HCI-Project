@@ -53,6 +53,11 @@ function TeamMember({ image, name, role }) {
 const LandingPage = () => {
   const navigate = useNavigate(); // Ensure this is defined
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isSolutionsHovered, setIsSolutionsHovered] = useState(false); // Track hover state
+  const [isWhoWeServeHovered, setIsWhoWeServeHovered] = useState(false); // Track Who We Serve hover state
+  const [isResourcesHovered, setIsResourcesHovered] = useState(false); // Track Resources hover state
+  const [isAboutUsHovered, setIsAboutUsHovered] = useState(false); // Track About Us hover state
+
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
@@ -87,10 +92,115 @@ const LandingPage = () => {
           <span className="bar"></span>
         </div>
         <ul className={`nav-links ${isMenuOpen ? 'active' : ''}`}>
-          <li><a href="#solutions">Solutions</a></li>
-          <li><a href="#who-we-serve">Who We Serve</a></li>
-          <li><a href="#resources">Resources</a></li>
-          <li><a href="#about-us">About Us</a></li>
+        <li 
+            className="nav-item"
+            onMouseEnter={() => setIsSolutionsHovered(true)} 
+            onMouseLeave={() => setIsSolutionsHovered(false)}
+          >
+            <a href="#solutions">Solutions</a>
+            {isSolutionsHovered && (
+              <div className="solutions-dropdown">
+                <div className="column">
+                  <h3>Our Platform</h3>
+                  <p>Barcode Health empowers users to make informed food choices by providing them with easy access to product allergen information and nutritional details through barcode scanning.</p>
+                </div>
+                <div className="column">
+                  <h3>Barcode Health Solutions</h3>
+                  <ul>
+                    <li><strong>Barcode Scanning<br/></strong> Real-time scanning of product barcodes to retrieve detailed nutritional and allergen information.</li>
+                    <li><strong>Allergen Detection<br/></strong> Highlights products that contain user-flagged allergens, with customizable alerts based on individual profiles.</li>
+                    <li><strong>Nutritional Breakdown<br/></strong> Displays comprehensive nutritional data, including calories, macronutrients, vitamins, and minerals, for each scanned product.</li>
+                  </ul>
+                </div>
+                <div className="column">
+                  <h3>Healthy Shopping Tips</h3>
+                  <p>Discover smart tips to make healthier choices while shopping. Learn how to read nutrition labels, compare products, and pick foods that align with your dietary goals.</p>
+                </div>
+              </div>
+            )}
+          </li>
+
+          {/* Who We Serve Dropdown */}
+          <li 
+            className="nav-item"
+            onMouseEnter={() => setIsWhoWeServeHovered(true)} 
+            onMouseLeave={() => setIsWhoWeServeHovered(false)}
+          >
+            <a href="#who-we-serve">Who We Serve</a>
+            {isWhoWeServeHovered && (
+              <div className="who-we-serve-dropdown">
+                <div className="column">
+                  <h3>Who We Serve</h3>
+                  <p>We provide tailored information for individuals with specific dietary needs and health goals.</p>
+                </div>
+                <div className="column">
+                  <h3>People with Allergies</h3>
+                  <p>Individuals with common or severe allergies to foods such as nuts, gluten, dairy, etc., looking to avoid harmful ingredients.</p>
+                </div>
+                <div className="column">
+                  <h3>Health-Conscious Consumers</h3>
+                  <p>Users who actively monitor their calorie intake, nutritional values, or those on special diets (e.g., keto, vegan, or low-carb diets).</p>
+                </div>
+                <div className="column">
+                  <h3>Parents and Caregivers</h3>
+                  <p>Those purchasing food for family members with allergies, such as parents of children with food sensitivities.</p>
+                </div>
+                <div className="column">
+                  <h3>Fitness Enthusiasts</h3>
+                  <p>Individuals focused on tracking their macros and overall nutrition for performance and fitness goals.</p>
+                </div>
+              </div>
+            )}
+          </li>
+
+          {/* Resources Dropdown */}
+          <li 
+            className="nav-item"
+            onMouseEnter={() => setIsResourcesHovered(true)} 
+            onMouseLeave={() => setIsResourcesHovered(false)}
+          >
+            <a href="#resources">Resources</a>
+            {isResourcesHovered && (
+              <div className="resources-dropdown">
+                <div className="column">
+                  <h3>Case Studies</h3>
+                  <p>Case studies explore the impact of diet awareness on individuals' health, focusing on how increased nutritional knowledge influences food choices, eating habits, and long-term well-being. They also highlight the importance of allergy awareness in dietary planning, examining how individuals with food allergies manage restrictions to avoid triggers.</p>
+                </div>
+              </div>
+            )}
+          </li>
+
+          {/* About Us Dropdown */}
+          <li
+            className="nav-item"
+            onMouseEnter={() => setIsAboutUsHovered(true)}
+            onMouseLeave={() => setIsAboutUsHovered(false)}
+          >
+            <a href="#about-us">About Us</a>
+            {isAboutUsHovered && (
+              <div className="about-us-dropdown">
+                <div className="column">
+                  <h3>About Us</h3>
+                  <p className="vision-text">The People Behind the Vision</p>
+                  <p>
+                    The dedicated individuals behind Barcode Health, with a mission and values pushing forward. It showcases their diverse backgrounds, expertise, and passions, illustrating how each member contributes to our shared vision. The team is committed to making a meaningful impact in the community and beyond.
+                  </p>
+                </div>
+                <div className="column">
+                  <h3>Join Us</h3>
+                  <p>Contact Us</p>
+                  <p>Interested in joining our mission? Reach out to us for more details about job opportunities, collaborations, and more.</p>
+                  {/* Social Media Icons */}
+                  <div className="social-icons">
+                    <img src={yt} alt="YouTube" className="social-icon" />
+                    <img src={fb} alt="Facebook" className="social-icon" />
+                    <img src={twitter} alt="Twitter" className="social-icon" />
+                    <img src={ig} alt="Instagram" className="social-icon" />
+                  </div>
+                </div>
+              </div>
+            )}
+          </li>
         </ul>
         <div className="nav-buttons">
         <button className="signin-button" onClick={handleSignInClick}>Sign In</button>
