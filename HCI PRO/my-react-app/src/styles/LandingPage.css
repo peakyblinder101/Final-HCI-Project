@@ -20,7 +20,6 @@ body {
   padding-bottom: 2px;
 }
 
-/* Navbar styles */
 .navbar {
   display: flex;
   justify-content: space-between;
@@ -34,14 +33,13 @@ body {
   z-index: 1;
 }
 
-/* Dropdown containers for Solutions, Who We Serve, Resources, About Us */
 .solutions-dropdown, 
 .who-we-serve-dropdown, 
 .resources-dropdown,
 .about-us-dropdown {
   display: none;
   position: absolute;
-  top: 86px; /* Position below the navbar */
+  top: 86px;
   left: 0;
   background-color: #c2e1ff;
   padding: 20px;
@@ -51,9 +49,8 @@ body {
   border-top: 2px solid white;
 }
 
-/* Column styling inside the dropdown */
 .column {
-  width: auto; /* Each column takes up 45% width */
+  width: auto; 
   margin-bottom: 20px;
   padding: 10px;
 }
@@ -87,7 +84,6 @@ body {
   font-weight: bold;
 }
 
-/* Social Media Icons container inside About Us */
 .social-icons {
   display: flex;
   gap: 15px;
@@ -106,7 +102,6 @@ body {
   transform: scale(1.2);
 }
 
-/* Show dropdown when hovering over the respective menu item */
 .nav-links li:hover .solutions-dropdown,
 .nav-links li:hover .who-we-serve-dropdown,
 .nav-links li:hover .resources-dropdown,
@@ -114,7 +109,6 @@ body {
   display: flex;
 }
 
-/* Navbar links */
 .nav-links {
   list-style: none;
   display: flex;
@@ -133,18 +127,17 @@ body {
   border-bottom: 2px solid #ffeed8;
 }
 
-/* About Us section specific styles */
 .nav-links li:hover .about-us-dropdown {
   display: flex;
 }
 
 .about-us-dropdown {
-  width: auto; /* Adjust width of the About Us dropdown */
+  width: auto;
   flex-direction: row;
 }
 
 .column {
-  width: 45%; /* Each column will take up 45% width of the dropdown */
+  width: 45%;
   margin-bottom: 20px;
 }
 
@@ -157,20 +150,19 @@ body {
 /* Responsive Design for About Us dropdown */
 @media (max-width: 768px) {
   .about-us-dropdown {
-    width: 100%; /* Full width for mobile */
+    width: 100%;
     flex-direction: column;
   }
 
   .column {
-    width: 100%; /* Full width for columns on small screens */
+    width: 100%;
   }
 
   .social-icons {
-    flex-direction: column; /* Stack social icons vertically on small screens */
+    flex-direction: column;
   }
 }
 
-/* Mobile Styles */
 @media (max-width: 768px) {
   .nav-links {
     display: none;
@@ -238,8 +230,6 @@ body {
     font-size: 1.2rem;
   }
 }
-
-
 
 .food-choices-container {
   display: flex;

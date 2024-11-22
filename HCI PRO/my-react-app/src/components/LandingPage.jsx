@@ -181,7 +181,7 @@ const LandingPage = () => {
               <div className="about-us-dropdown">
                 <div className="column">
                   <h3>About Us</h3>
-                  <p className="vision-text">The People Behind the Vision</p>
+                  <h2>The People Behind the Vision</h2>
                   <p>
                     The dedicated individuals behind Barcode Health, with a mission and values pushing forward. It showcases their diverse backgrounds, expertise, and passions, illustrating how each member contributes to our shared vision. The team is committed to making a meaningful impact in the community and beyond.
                   </p>
@@ -202,6 +202,7 @@ const LandingPage = () => {
             )}
           </li>
         </ul>
+        
         <div className="nav-buttons">
         <button className="signin-button" onClick={handleSignInClick}>Sign In</button>
         <button className="signup-button" onClick={handleSignUpClick}>Sign Up</button>
