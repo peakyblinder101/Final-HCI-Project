@@ -18,7 +18,7 @@ const DetailsScan = () => {
       </div>
 
       {/* Main Content Section (Calories, Allergens, Nutrients, and Nutrient Info) */}
-      <div className="main-content">
+      <div className="main-content-detailscan">
         <div className="left-column">
           {/* Calories container */}
           <div className="calories-container">
