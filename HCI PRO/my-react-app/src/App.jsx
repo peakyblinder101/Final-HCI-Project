@@ -8,8 +8,8 @@ import DietaryProfile from './components/DietaryProfile';
 import HealthyTips from './components/HealthyTips';
 import ScanHistory from './components/ScanHistory';
 import Favorites from './components/Favorites';
-
-
+import ScanInProgress from './components/ScanInProgress'; // Import ScanInProgress
+import DetailsScan from './components/DetailsScan'; // Import DetailsScan
 
 import './styles/layout.css'; // Scoped layout CSS
 
@@ -32,7 +32,6 @@ const App = () => {
   const handleSignIn = () => {
     setIsAuthenticated(true);  // Set user as authenticated
   };
-  
 
   // Handle user logout
   const handleSignOut = () => {
@@ -55,7 +54,8 @@ const App = () => {
             <Route path="/healthytips" element={<Layout><HealthyTips /></Layout>} />
             <Route path="/scanhistory" element={<Layout><ScanHistory /></Layout>} />
             <Route path="/favorites" element={<Layout><Favorites /></Layout>} />
-            
+            <Route path="/scaninprogress" element={<Layout><ScanInProgress /></Layout>} /> {/* Route for ScanInProgress */}
+            <Route path="/detailsScan/:barcode" element={<Layout><DetailsScan /></Layout>} /> {/* Route for DetailsScan */}
           </>
         )}
       </Routes>

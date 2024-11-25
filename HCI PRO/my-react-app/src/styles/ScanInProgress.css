@@ -1,0 +1,57 @@
+.scan-in-progress {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+    background-color: #6c5555;
+    margin: 0;
+    padding: 0;
+}
+
+.scan-in-progress-container {
+    margin-top: 50px;
+    background-color: white;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 80%;
+    height: 70%;
+    box-sizing: border-box;
+}
+
+/* Style the video container */
+#scanner-container {
+    width: 100%; /* This will make the container take up full width */
+    height: 100%; /* Make the container take up full height */
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    overflow: hidden;
+    position: relative; /* To ensure Quagga's video stream fits correctly */
+}
+
+/* Ensure video inside the container fills up the available space */
+#scanner-container video {
+    width: 100%;  /* Make the video fill the container */
+    height: 100%; /* Make the video fill the container */
+    object-fit: cover; /* This ensures that the video covers the area of the container without distortion */
+}
+.loading-indicator {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    font-size: 20px;
+    color: #333;
+  }
+  
+  .error-message {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    font-size: 18px;
+    color: red;
+  }
+  

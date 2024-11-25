@@ -1,0 +1,211 @@
+/* General Layout Container */
+.details-scan-container {
+    margin: 0%;
+    padding: 0%;
+    width: 95%;
+    margin: 30px auto;
+    background-color: #bababa;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;  /* Ensures there’s space between sections */
+  }
+  
+  /* Barcode and No Allergens Detected Section */
+  .barcode-section {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+  }
+  
+  .barcode-container,
+  .no-allergens-container {
+    width: 48%;
+    padding: 15px;
+    background-color: #f8f9fa;
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+    text-align: center;
+  }
+  
+  .barcode-number {
+    font-size: 16px;
+    color: #555;
+  }
+  
+  .no-allergens-text {
+    font-size: 16px;
+    color: #555;
+  }
+  
+  /* Main Content Section (Calories, Allergens, Nutrients, and Nutrient Info) */
+  .main-content {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 20px;
+    background-color: #007bff;
+  }
+  
+  /* Left Column (Calories, Allergens) */
+  .left-column {
+    padding: 0;
+    margin: 0;
+    width: 25%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .calories-container,
+  .allergens-container {
+    height: 20%;
+    text-align: center;
+    padding: 20px;
+    background-color: #f8f9fa;
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  }
+  
+  .calories-title,
+  .allergens-title {
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 12px;
+  }
+  
+  .calories-value,
+  .allergens-list {
+    font-size: 14px;
+    color: #555;
+    font-weight: 400;
+  }
+  
+  /* Right Column (Nutrients, Nutrient Info) */
+  .right-column {
+    padding: 0;
+    margin: 0;
+    width: 75%;
+    display: flex;
+    justify-content: space-between; /* Aligns Nutrients and Nutrient Info horizontally */
+    gap: 20px;
+  }
+  
+  .nutrients-container,
+  .nutrient-info-container {
+    height: 39vh;
+    width: 48%; /* Each container takes up half the right column's width */
+    padding: 20px;
+    background-color: #f8f9fa;
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  }
+  
+  .nutrients-title,
+  .nutrient-info-title {
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 12px;
+  }
+  
+  .nutrients-list li,
+  .nutrient-info-list li {
+    font-size: 14px;
+    color: #555;
+    font-weight: 400;
+    margin-bottom: 6px;
+  }
+  
+  /* Ingredients Section */
+  .ingredients-container {
+    margin: 0%;
+    padding: 0%;
+    margin-top: 0px; /* Ensures space between the sections */
+    padding: 20px;
+    background-color: #f8f9fa;
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+    text-align: center;
+    margin-bottom: 30px; /* Prevents overlapping at the bottom */
+  }
+  
+  .ingredients-title {
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 12px;
+  }
+  
+  .ingredients-list {
+    font-size: 14px;
+    color: #555;
+    font-weight: 400;
+    line-height: 1.6;
+  }
+  
+  /* Add to Favorites Button */
+  .add-to-favorites-container {
+    margin-top: 10px;
+    text-align: right;
+    margin-bottom: 10px; /* Prevents overlapping at the bottom */
+  }
+  
+  .add-to-favorites {
+    background-color: #007bff;
+    color: #fff;
+    padding: 12px 30px;
+    font-size: 16px;
+    border-radius: 25px;
+    border: none;
+    cursor: pointer;
+    width: auto;
+  }
+  
+  .add-to-favorites:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Mobile Responsiveness */
+  @media screen and (max-width: 768px) {
+    .barcode-section {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .barcode-container,
+    .no-allergens-container {
+      width: 100%;
+      margin-bottom: 20px;
+    }
+  
+    .main-content {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    .left-column,
+    .right-column {
+      width: 100%;
+    }
+  
+    .calories-container,
+    .allergens-container,
+    .nutrients-container,
+    .nutrient-info-container {
+      width: 100%;
+      margin-bottom: 20px;
+    }
+  
+    .ingredients-container {
+      width: 100%;
+    }
+  
+    .add-to-favorites-container {
+      width: 100%;
+      text-align: center;
+    }
+  }
+  

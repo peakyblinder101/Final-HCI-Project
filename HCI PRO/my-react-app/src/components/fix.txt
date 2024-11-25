@@ -3,19 +3,16 @@ import { useNavigate } from 'react-router-dom';
 import '../styles/Home.css';
 import { FaRegClock } from 'react-icons/fa';
 import dadi from '../assets/dadi.jpg';
-import ScanInProgress from './ScanInProgress';  // Import ScanInProgress component
+
 
 const Home = () => {
   const navigate = useNavigate();
-  const [showScanContainer, setShowScanContainer] = useState(false);
 
   const handleCardClick = () => {
     navigate('/dietaryprofile');
   };
 
-  const handleScanClick = () => {
-    setShowScanContainer(true); // Show the scan container
-  };
+
 
   const recentScans = [
     { productName: 'Peanuts', price: '$100.00', date: 'October 12, 2024', barcode: '#1234567890123' },
@@ -28,10 +25,6 @@ const Home = () => {
 
   return (
     <div className="home-page">
-      {showScanContainer ? (
-        <ScanInProgress /> // Show ScanInProgress component when button is clicked
-      ) : (
-        <>
           <div className="small-card-user-container" onClick={handleCardClick}>
             <img
               src={dadi}
@@ -46,7 +39,7 @@ const Home = () => {
 
           <div className="scanner-container">
             <div className="scanner">
-              <button className="scan-button" onClick={handleScanClick}>Start Scan</button>
+              <button className="scan-button">Start Scan</button>
             </div>
           </div>
 
@@ -66,10 +59,45 @@ const Home = () => {
               ))}
             </div>
           </div>
-        </>
-      )}
     </div>
   );
 };
 
 export default Home;
+
+import React, { useEffect, useRef } from 'react';
+import { useNavigate } from 'react-router-dom';
+import '../styles/ScanInProgress.css';
+
+
+const ScanInProgress = () => {
+  return (
+    <div className="scan-in-progress">
+      <div className="scan-in-progress-container">
+      </div>
+    </div>
+  );
+};
+
+export default ScanInProgress;
+
+import React, { useEffect } from 'react';
+import '../styles/DetailsScan.css';
+
+const DetailsScan = () => {
+
+  return (
+    <div className="details-scan">
+      <div className="details-scan-container">
+      </div>
+    </div>
+  );
+};
+
+export default DetailsScan;
+
+Can you complete this code I want the user click the button scan-button(start scan)
+the user will navigate to ScanInProgress that can accept scanning the barcode(EAN_13)
+after the barcode scan the camera will terminate then the user navigate to DetailsScan
+and the user can see the barcode that get scan. by the way for scanning the barcode 
+use quaggajs.

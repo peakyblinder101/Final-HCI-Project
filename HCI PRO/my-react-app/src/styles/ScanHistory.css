@@ -24,7 +24,8 @@
     margin-bottom: 20px;
 }
 
-.all-category-btn, .safe-category-btn, .detect-category-btn {
+/* Common styles for the buttons */
+.category-btn {
     margin-right: 10px;
     border-radius: 20px;
     background-color: #ffffff;
@@ -32,17 +33,18 @@
     border: 1px solid rgb(94, 94, 94);
     cursor: pointer;
     transition: background-color 0.3s ease;
+    padding: 10px 30px;
 }
 
-.all-category-btn, .safe-category-btn {
-    width: 100px;
-}
-
-.all-category-btn:hover, 
-.safe-category-btn:hover, 
-.detect-category-btn:hover {
+.category-btn:hover {
     background-color: #dcdcdc;
 }
+
+.category-btn.active {
+    background-color: #dcdcdc; /* Keeps the button in hover state */
+    font-weight: bold;  /* Optional: Add bold for active button */
+}
+
 
 .all-history-scan-records-container {
     max-height: 450px; 
