@@ -4,7 +4,7 @@
     align-items: center;
     height: 100vh;
     width: 100%;
-    background-color: #6c5555;
+    background-color: #ffffff;
     margin: 0;
     padding: 0;
 }
@@ -12,9 +12,9 @@
 .scan-in-progress-container {
     margin-top: 50px;
     background-color: white;
+    border: 2px solid black;
     padding: 30px;
     border-radius: 8px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     text-align: center;
     width: 80%;
     height: 70%;
